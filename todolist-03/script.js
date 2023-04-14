@@ -12,7 +12,7 @@ function render() {
       <div class='job-item'>
       <input type="text" readonly value="${el.title}" />
       <button>Edit</button>
-      <button>Delete</button>
+      <button onclick="deleteJob(${el.id})">Delete</button>
       </div>
     `
   })
@@ -25,7 +25,6 @@ function render() {
 render()
 
 // https://www.w3schools.com/jsref/event_onsubmit.asp
-// https://www.w3schools.com/jsref/met_form_reset.asp
 
 let jobForm = document.querySelector('.job-form')
 jobForm.onsubmit = function (e) {
@@ -41,5 +40,11 @@ jobForm.onsubmit = function (e) {
   jobs.push(newJob)
   // console.log(jobs)
   jobForm.reset()
+  render()
+}
+
+function deleteJob(id) {
+  let idx = jobs.findIndex(el => el.id === id)
+  jobs.splice(idx,1)
   render()
 }
