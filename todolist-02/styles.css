@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: 'Prompt', sans-serif;
+}
+header {
+  padding: 0.5rem;
+  width: 40rem;
+  margin: 1rem auto;
+}
+
+main {
+  padding: 2rem 1rem;
+  width: 40rem;
+  min-width: 400px;
+  background: coral;
+  margin:  auto;
+}
+
+.job-form{
+  display: flex;
+  gap: 2px;
+  margin-bottom: 1rem;
+}
+
+.job-form > *:first-child {
+  flex: 1;
+  padding: 0.5rem 0.2rem;
+  font-size: 1.2rem;
+}
+
+.job-form > *:not(:first-child) {
+  padding-inline: 0.5rem;
+}
+
+.job-item {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.1rem;
+}
+.job-item > *:first-child {
+  flex: 1;
+  padding: 0.5rem 0.2rem;
+  font-size: 1rem;
+}
+
+.job-item > *:not(:first-child) {
+  padding-inline: 0.5rem;
+}
+

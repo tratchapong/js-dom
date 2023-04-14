@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM Lab</title>
+  </head>
+  <body>
+    <h1>Codecamp 14</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi autem exercitationem
+      explicabo esse libero tempora nesciunt fugit et cumque voluptate.
+    </p>
+    <img src="https://picsum.photos/300" alt="" />
+    <script>
+      // setTimeout(()=>{
+      //   location.assign('https://www.example.com')
+      // }, 2000)
+
+      function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        alert(`Your current location ==> Latitude: ${latitude} / Longtitude: ${longitude} `);
+        location.assign(`https://www.openstreetmap.org/#map=10/${latitude}/${longitude}`);
+      }
+
+      function error() {
+        alert("Unable to process your location");
+      }
+      window.navigator.geolocation.getCurrentPosition(success, error);
+    </script>
+  </body>
+</html>
