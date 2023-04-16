@@ -5,23 +5,43 @@
   padding: 0;
   margin: 0;
 }
-
 html {
   font-family: 'Prompt', sans-serif;
 }
-
 header {
   padding: 0.5rem;
   width: 40rem;
   margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-btn {
+  font-size: 1.5rem;
+  padding-inline: 8px;
+  border: none;
+  box-shadow: 4px 4px 8px #999;
+}
+
+.sort-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 4px;
+  left: 4px;
 }
 
 main {
   padding: 2rem 1rem;
   width: 40rem;
   min-width: 400px;
-  background: lightgreen;
+  background: violet;
   margin:  auto;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column-reverse;
+  transition: 0.5s;
 }
 
 .job-form{
