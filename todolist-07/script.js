@@ -53,7 +53,7 @@ jobForm.onsubmit = function (e) {
   // console.log(e.target.elements['title'].value)
   let newTitle = e.target.elements[0].value;
   if (!newTitle.trim()) return;
-  let newId = jobs[jobs.length - 1].id + 1;
+  let newId = jobs.length > 0 ? jobs[jobs.length - 1].id + 1 : 1;
   let newJob = {
     id: newId,
     title: newTitle,
