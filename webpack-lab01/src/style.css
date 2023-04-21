@@ -1,0 +1,12 @@
+.hello {
+    color: red;
+    background: url('./icon.png');
+    background-size: 10%;
+    padding: 20px;
+}
+
+.banner {
+    color: white;
+    background: blue;
+    cursor: pointer;
+}
